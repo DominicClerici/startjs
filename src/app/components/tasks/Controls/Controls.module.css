@@ -1,0 +1,105 @@
+.container {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 1.5rem;
+  width: 100%;
+}
+.clear {
+  font-size: var(--font-size-base);
+  padding: 0.8em 1em;
+  flex-shrink: 1;
+}
+.create {
+  font-size: var(--font-size-base);
+  padding: 0.8em 1em;
+  flex-grow: 1;
+}
+.close {
+  cursor: pointer;
+  filter: var(--black-icon-invert);
+  transition: filter 0.15s;
+}
+.close:hover {
+  filter: var(--black-icon-invert-hover);
+}
+.creatingTaskCont {
+  padding: 1.5rem;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 1px var(--text-color-accent) solid;
+}
+.title {
+  background-color: transparent;
+  border-color: var(--text-color-second);
+  border-style: solid;
+  border-width: 0px 0px 2px 0px;
+  color: var(--text-color-accent);
+  font-family: var(--font-jakarta);
+  font-size: var(--font-size-md);
+  outline: 0;
+  transition: color 0.1s, border-color 0.1s;
+}
+.description {
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  font-family: var(--font-inter);
+  font-size: var(--font-size-sm);
+  color: var(--text-color-second);
+  background-color: var(--panel-interactable);
+  padding: 0.5rem;
+  transition: color 0.1s, background-color 0.1s;
+  resize: vertical;
+}
+.description:focus {
+  color: var(--text-color-main);
+  background-color: var(--panel-interactable-hover);
+}
+.title:focus {
+  color: var(--text-color-main);
+  border-color: var(--text-color-main);
+}
+.dateLabel {
+  color: var(--text-color-second);
+  font-size: var(--font-size-base);
+}
+.submit {
+  font-size: var(--font-size-base);
+  padding: 0.8em 1em;
+}
+.dateInput {
+  flex-grow: 1;
+  outline: none;
+  background-color: var(--panel-interactable);
+  border: none;
+  color: var(--text-color-second);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-inter);
+  border-radius: 8px;
+  padding: 0.5em;
+  transition: color 0.1s, background-color 0.1s;
+}
+.dateInput:focus {
+  background-color: var(--panel-interactable-hover);
+  color: var(--text-color-main);
+}
+.dateInput:first-of-type {
+  margin-inline: 1rem;
+}
+.errorBack a {
+  color: var(--error-text);
+  font-weight: 600;
+}
+.errorBack {
+  font-size: var(--font-size-base);
+  text-align: center;
+  padding-block: 1em;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: var(--error-background);
+}

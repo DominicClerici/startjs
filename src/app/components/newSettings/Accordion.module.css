@@ -1,0 +1,57 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.AccordionCont {
+  animation: fadeIn 0.4s 0.1s backwards;
+  padding: 1rem;
+  width: 100%;
+}
+.AccordionTitleCont {
+  cursor: pointer;
+  display: flex;
+  user-select: none;
+  align-items: center;
+}
+.AccordionTitleCont:hover h1,
+.AccordionTitleCont.open h1 {
+  color: var(--text-color-main);
+}
+.AccordionTitleCont:hover div,
+.AccordionTitleCont.open div {
+  background-color: var(--text-color-main);
+}
+.AccordionTitleCont h1 {
+  transition: color 0.1s;
+  font-weight: 600;
+  padding-right: 1rem;
+  font-size: calc(var(--font-size-lg) - 4px);
+  color: var(--text-color-second);
+}
+.AccordionTitleCont div {
+  transition: color 0.1s;
+  height: 1px;
+  background-color: var(--text-color-second);
+  width: 100%;
+}
+.AccordionContentCont {
+  max-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-inline: 0.5rem;
+  position: relative;
+  transform: scale(0.9);
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s, opacity 0.3s, transform 0.3s;
+}
+.AccordionContentCont.open {
+  max-height: unset;
+  transform: scale(1);
+  opacity: 1;
+}

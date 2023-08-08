@@ -1,0 +1,51 @@
+.toggleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.labelContainer {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  color: var(--text-color-second);
+  font-size: var(--font-size-base);
+}
+.explainer {
+  color: var(--text-color-second);
+  font-size: var(--font-size-sm);
+  max-width: 60%;
+}
+.toggle {
+  cursor: pointer;
+  appearance: none;
+  position: relative;
+  display: inline-block;
+  width: 6rem;
+  height: 3rem;
+  background-color: var(--panel-interactable);
+  border-radius: 30px;
+  transition: background-color 0.3s;
+}
+.toggle::after {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  content: "";
+  height: calc(3rem - 4px);
+  width: calc(3rem - 4px);
+  border-radius: 4rem;
+  background-color: white;
+  transition: left 0.3s;
+}
+.toggle:checked {
+  background-color: var(--color-highlight) !important;
+}
+.toggle:checked::after {
+  left: calc(50% + 2px);
+}
+
+.selectorContainer {
+  position: relative;
+}

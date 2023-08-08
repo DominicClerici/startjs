@@ -1,0 +1,63 @@
+.container {
+  padding-inline: 1.5rem;
+  overflow-y: scroll;
+}
+.taskContainer {
+  margin-block: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.taskContainer:first-of-type {
+  margin-top: 1rem;
+}
+.title {
+  font-size: var(--font-size-md);
+  color: var(--text-color-main);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.content {
+  white-space: pre-line;
+  margin-top: 0.3rem;
+  color: var(--text-color-second);
+  font-size: var(--font-size-sm);
+  overflow-y: scroll;
+  display: -webkit-box;
+  -webkit-line-clamp: 12;
+  -webkit-box-orient: vertical;
+}
+.dateBar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.dateBar a {
+  color: var(--text-color-second);
+  font-weight: 600;
+  font-size: calc(var(--font-size-xs) + 2px);
+}
+.progressBar {
+  background-color: var(--panel-interactable);
+  flex-grow: 1;
+  height: 1.5rem;
+  margin-inline: 1rem;
+  border-radius: 10px;
+}
+.progressBar div {
+  width: 50%;
+  height: 100%;
+  background-color: var(--color-highlight);
+  border-radius: 10px;
+}
+.dateBar img {
+  cursor: pointer;
+  filter: var(--black-icon-invert);
+  margin-inline: 0.5rem;
+  padding: 0.3rem;
+}
+.dateBar img:hover {
+  filter: var(--black-icon-invert-hover);
+}

@@ -1,0 +1,77 @@
+.edge {
+  z-index: 20;
+  height: 100vh;
+  background-color: var(--med-panel);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 550px;
+  transform: translate(calc(-550px + 6rem));
+  transition: transform 0.2s, background-color 0.2s;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+}
+.notif {
+  width: 5rem;
+  color: var(--text-color-second);
+  background-color: var(--med-panel);
+  border-radius: 8px;
+  padding-block: 0.5em;
+  margin-top: 2rem;
+  margin-inline: auto 0.5rem;
+  font-size: var(--font-size-md);
+  font-family: var(--font-inter);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+.notif.open {
+  pointer-events: none;
+  opacity: 0;
+}
+.edge.open {
+  transition: transform 0.4s, background-color 0.4s;
+  background-color: var(--dark-panel);
+  transform: translate(0px);
+  cursor: default;
+}
+.window {
+  max-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.clickHandler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+.clickHandler.open {
+  pointer-events: all;
+}
+.error {
+  text-align: center;
+  color: var(--text-color-main);
+  font-size: var(--font-size-base);
+}
+@media (max-width: 700px) {
+  .edge {
+    display: none;
+  }
+}
+.signin {
+  top: 2.5rem;
+  left: 2.5rem;
+  position: absolute;
+  padding: 0.8em;
+  font-size: var(--font-size-base);
+}

@@ -1,0 +1,116 @@
+.container {
+  position: absolute;
+  bottom: 0;
+  width: 70rem;
+  bottom: 2.5rem;
+  left: calc(50% - 35rem);
+  transition: scale 0.28s, translate 0.28s, background-color 0.28s;
+  scale: 0.8;
+  z-index: 11;
+}
+
+.container.active {
+  scale: 1;
+  translate: 0 -65vh;
+  transition: scale 0.3s 0.1s, translate 0.3s, background-color 0.25s;
+}
+.searchBar {
+  background-color: var(--search-noFocus);
+  position: relative;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 0.5em;
+  width: 100%;
+  font-size: var(--font-size-lg);
+  z-index: 6;
+  font-family: var(--font-jakarta);
+  font-weight: 600;
+  transition: background-color 0.35s, color 0.35s, border-radius 0.3s;
+  color: var(--text-color-main);
+}
+.searchBar.resultsShown {
+  border-radius: 10px 10px 0px 0px;
+}
+.searchBar::placeholder {
+  transition: color 0.4s;
+  color: var(--text-color-dark-accent);
+}
+.container.active .searchBar {
+  background-color: var(--search-focus);
+  color: var(--text-color-dark);
+}
+.container.active .searchBar::placeholder {
+  color: var(--text-color-accent);
+}
+.results {
+  z-index: 5;
+  margin: 0;
+  padding: 0;
+  padding-top: 5rem;
+  margin-top: -5rem;
+  list-style: none;
+  width: 100%;
+  top: calc(100%);
+  position: absolute;
+  background-color: var(--search-focus);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 0px 10px 10px;
+  scale: 0.8;
+  opacity: 0;
+  transition: scale 0.15s, translate 0.15s, opacity 0.15s;
+  translate: 0 -20%;
+  pointer-events: none;
+}
+.results.shown {
+  pointer-events: all;
+  transition: scale 0.35s, translate 0.25s, opacity 0.3s;
+  scale: 1;
+  translate: 0 0;
+  opacity: 1;
+}
+.results a {
+  font-size: var(--font-size-base);
+  text-decoration: none;
+  display: inline-block;
+  padding-block: 0.2em;
+  padding-left: 0.2em;
+  color: black;
+  background-color: white;
+}
+.results a:last-of-type {
+  border-radius: 0px 0px 10px 10px;
+}
+.hov {
+  background-color: var(--search-focus) !important;
+}
+.darken {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark-panel);
+  opacity: 0;
+  backdrop-filter: blur(5px);
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.darken.on {
+  pointer-events: all;
+  opacity: 1;
+}
+@media (max-width: 900px) {
+  .container {
+    width: 50rem;
+    left: calc(50% - 25rem);
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    width: 90vw;
+    left: 5vw;
+  }
+}

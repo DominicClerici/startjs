@@ -1,0 +1,226 @@
+.shortcutColCont {
+  overflow: hidden;
+  user-select: none;
+}
+.shortcutColTitleCont {
+  padding-block: 1rem;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.button {
+  padding: 0.7rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+.button img {
+  transition: filter 0.2s;
+  filter: invert(58%) sepia(0%) saturate(300%) hue-rotate(315deg);
+}
+.button:hover img {
+  filter: invert(58%) sepia(100%) saturate(300%) hue-rotate(315deg);
+}
+.button.confirm:hover img {
+  filter: invert(1);
+}
+.shortcutColTitleCont a {
+  cursor: pointer;
+  transition: color 0.1s;
+  font-size: var(--font-size-base);
+  color: var(--text-color-second);
+}
+.tick {
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.1s;
+  transform: rotateX(180deg);
+  filter: invert(0.7);
+  margin-right: 0.5rem;
+}
+.shortcutColTitleCont.open .tick {
+  transform: rotateX(0deg);
+  filter: invert(0.8);
+}
+.shortcutColTitleCont:hover .tick {
+  filter: invert(0.8);
+}
+
+.shortcutColTitleCont:hover a,
+.shortcutColTitleCont.open a {
+  color: var(--text-color-main);
+}
+.shortcutList {
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+  transform: translateY(-100%);
+  height: 0;
+}
+.shortcutList.open {
+  opacity: 1;
+  transform: translateY(0);
+  height: unset;
+}
+.indivShortcut {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1.5rem 0.5rem 0rem;
+  position: relative;
+}
+.editCont {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  color: var(--text-color-second);
+  cursor: pointer;
+  max-width: 80%;
+}
+.editCont a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-clamp: 1;
+}
+.editCont img {
+  opacity: 0;
+  transition: opacity 0.1s;
+  filter: invert(0.6);
+  margin-right: 0.5rem;
+}
+.editCont:hover img {
+  opacity: 0.6;
+}
+.editCont:hover {
+  color: var(--text-color-main);
+}
+.edit {
+  margin-right: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.1s;
+  filter: invert(0.3);
+}
+.delete {
+  cursor: pointer;
+  margin-left: auto;
+  transition: filter 0.2s;
+  filter: invert(58%) sepia(0%) saturate(300%) hue-rotate(315deg);
+}
+.delete:hover {
+  filter: invert(58%) sepia(100%) saturate(300%) hue-rotate(315deg);
+}
+.cat {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.cat a {
+  font-weight: 600;
+  min-width: 3em;
+  font-size: var(--font-size-xs);
+  color: var(--text-color-accent);
+}
+.cat input {
+  transition: background-color 0.05s;
+  outline: none;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--panel-interactable);
+  padding: 0.5em 0.3em;
+  color: var(--text-color-main);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-jakarta);
+}
+.cat input:focus {
+  background-color: var(--panel-interactable-hover);
+}
+.save {
+  font-size: var(--font-size-base);
+  padding: 0.6em 1em;
+}
+.editing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dontSave {
+  margin-left: auto;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: filter 0.1s;
+  filter: invert(58%) sepia(100%) saturate(300%) hue-rotate(315deg);
+}
+.dontSave:hover {
+  filter: invert(58%) sepia(100%) saturate(6000%) hue-rotate(335deg);
+}
+.addNew {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: var(--font-size-base);
+  background-color: transparent;
+  border: none;
+  color: var(--text-color-second);
+  cursor: pointer;
+}
+.addNew:hover {
+  color: var(--text-color-main);
+}
+.addNew img {
+  margin-right: 0.5rem;
+  filter: invert(0.7);
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+.addNew:hover img {
+  opacity: 0.6;
+}
+.addNew.short {
+  font-size: var(--font-size-sm);
+}
+.titleEditImage {
+  padding: 2px;
+  opacity: 0;
+  filter: invert(0.6);
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: opacity 0.1s;
+}
+.shortcutColTitleCont:hover .titleEditImage {
+  opacity: 1;
+}
+.titleInput {
+  transition: background-color 0.05s;
+  outline: none;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--panel-interactable);
+  padding: 0.3em 0.2em;
+  width: max(200px, 70%);
+  color: var(--text-color-main);
+  font-size: var(--font-size-base);
+  font-family: var(--font-jakarta);
+}
+.titleInput:focus {
+  background-color: var(--panel-interactable-hover);
+}
+.shortcutColTitleCont a {
+  max-width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-clamp: 1;
+}
+.favicon {
+  position: absolute;
+  opacity: 1 !important;
+  filter: none !important;
+  transition: opacity 0.1s;
+}
+.favicon.empy {
+  filter: invert(0.7) !important;
+}
+.editCont:hover .favicon {
+  opacity: 0 !important;
+}

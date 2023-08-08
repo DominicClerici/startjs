@@ -1,0 +1,36 @@
+@keyframes moveBack {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.initial {
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    45deg,
+    rgba(24, 26, 32, 1) 0%,
+    rgba(67, 81, 120, 1) 100%
+  );
+  background-size: 500%;
+  animation: moveBack 15s infinite;
+}
+.background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-size: 300%;
+  animation: moveBack 15s infinite;
+}

@@ -1,0 +1,102 @@
+.openerButton {
+  background-color: var(--dark-panel);
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  padding: 0.5rem;
+  transform: rotateZ(0deg);
+  transition: transform 0.4s, background-color 0.1s;
+  cursor: pointer;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid slategray;
+}
+.openerButton img {
+  filter: var(--black-icon-invert);
+  padding: 0.5rem;
+}
+.openerButton:hover {
+  background-color: var(--med-panel);
+}
+.openerButton.open {
+  transform: rotateZ(-180deg);
+}
+.window {
+  z-index: 5;
+  position: absolute;
+  transform: translateX(100%);
+  right: 0;
+  top: 0;
+  width: 500px;
+  height: 100vh;
+  background-color: var(--darker-panel);
+  backdrop-filter: blur(6px);
+  transition: transform 0.4s;
+}
+.window.open {
+  transform: translateX(0%);
+}
+.fixedHeader {
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 9rem;
+  min-height: 9rem;
+}
+.saveButton {
+  flex-grow: 1;
+  margin-right: 2rem;
+  padding-block: 0.6em;
+  font-size: var(--font-size-md);
+  filter: brightness(0.5);
+  pointer-events: none;
+  transition: filter 0.2s;
+}
+.saveButton.changed {
+  filter: brightness(1);
+  pointer-events: all;
+}
+.closeIcon {
+  padding: 1rem;
+  cursor: pointer;
+}
+.contentContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: calc(100% - 9rem);
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding-bottom: 5rem;
+}
+.clickHandler {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+.clickHandler.open {
+  pointer-events: all;
+}
+@media (max-width: 700px) {
+  .openerButton {
+    display: none;
+  }
+  .window {
+    display: none;
+  }
+}
+.logoutButton {
+  font-size: var(--font-size-sm);
+  padding: 1em;
+  margin: 0 auto;
+}

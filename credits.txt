@@ -1,0 +1,20 @@
+--- tick --- 
+<a target="_blank" href="https://icons8.com/icon/ahobfTJIEHd8/expand-arrow">Expand Arrow</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+--- trash ---
+<a target="_blank" href="https://icons8.com/icon/QbdYxvBYITkh/remove">Trash</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+--- check --- 
+<a target="_blank" href="https://icons8.com/icon/wgbKaViXphIm/checked-checkbox">Check</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+--- edit ---
+<a target="_blank" href="https://icons8.com/icon/59856/pencil">Pencil</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+--- settings ---
+<a target="_blank" href="https://icons8.com/icon/364/settings">Settings</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+--- globe ---
+<a target="_blank" href="https://icons8.com/icon/3685/globe">Globe</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+--- calendar ---
+<a target="_blank" href="https://icons8.com/icon/85102/calendar">Calendar</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
